@@ -1,8 +1,8 @@
-import { TemaService } from './../../tema/services/tema.service';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { DeleteResult, ILike, Repository } from 'typeorm';
 import { Postagem } from '../entities/postagem.entity';
+import { TemaService } from './../../tema/services/tema.service';
 
 @Injectable()
 export class PostagemService {
@@ -16,6 +16,7 @@ export class PostagemService {
     return await this.postagemRepository.find({
       relations: {
         tema: true,
+        usuario: true,
       },
     });
   }
@@ -27,6 +28,7 @@ export class PostagemService {
       },
       relations: {
         tema: true,
+        usuario: true,
       },
     });
 
@@ -42,6 +44,7 @@ export class PostagemService {
       },
       relations: {
         tema: true,
+        usuario: true,
       },
     });
   }

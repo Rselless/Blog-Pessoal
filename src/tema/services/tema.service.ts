@@ -1,7 +1,7 @@
-import { Tema } from './../entities/tema.entity';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { DeleteResult, ILike, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
+import { DeleteResult, ILike, Repository } from 'typeorm';
+import { Tema } from './../entities/tema.entity';
 
 @Injectable()
 export class TemaService {
@@ -39,11 +39,12 @@ export class TemaService {
       where: {
         descricao: ILike(`%${descricao}%`),
       },
-      relations: {
+        relations: {
         postagem: true,
       },
-    });
-  }
+    })
+    }
+  
 
   async create(Tema: Tema): Promise<Tema> {
     return await this.temaRepository.save(Tema);

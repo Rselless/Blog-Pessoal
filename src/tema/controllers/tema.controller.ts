@@ -1,5 +1,3 @@
-import { Tema } from '../entities/tema.entity';
-import { TemaService } from './../services/tema.service';
 import {
   Body,
   Controller,
@@ -12,6 +10,8 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
+import { Tema } from '../entities/tema.entity';
+import { TemaService } from './../services/tema.service';
 
 @Controller('/temas')
 export class TemaController {
