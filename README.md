@@ -24,7 +24,6 @@ Este projeto é uma aplicação de blog pessoal desenvolvida com [NestJS](https:
 - **Administração de usuários:**
   - Visualizar dados dos usuários cadastrados.
   - Atualizar informações do usuário.
-  - Excluir usuários.
 
 - **Configuração para múltiplos ambientes:**
   - Suporte para ambiente de desenvolvimento e produção.
@@ -81,7 +80,7 @@ src/
 ## Testes
 
 ```bash
-npm run test:e2e
+   npm run test:e2e
 ```
 
 ## Contato
@@ -90,7 +89,3 @@ npm run test:e2e
 - Email: selles.rafael27@gmail.com.com
 - GitHub: [GitHub](https://github.com/Rselless)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/rafael-selles-sant-anna/)
-
-## Licença
-
-Este projeto está sob a licença
