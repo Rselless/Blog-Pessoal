@@ -15,7 +15,7 @@ export class UsuarioService {
   async findByUsuario(usuario: string): Promise<Usuario | null> {
     return await this.usuarioRepository.findOne({
       where: {
-        usuario: usuario,
+        usuario,
       },
     });
   }
@@ -54,7 +54,7 @@ export class UsuarioService {
 
     if (buscaUsuario && buscaUsuario.id !== usuario.id)
       throw new HttpException(
-        'Usuário (e-mail) já Cadastrado!',
+        'Usuário Errado',
         HttpStatus.BAD_REQUEST,
       );
 

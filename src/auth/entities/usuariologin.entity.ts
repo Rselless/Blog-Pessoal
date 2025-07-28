@@ -1,7 +1,9 @@
+import { IsNotEmpty } from 'class-validator';
+
 export class UsuarioLogin {
+  @IsNotEmpty({ message: 'O campo usuário é obrigatório' })
+  public usuario: string;
 
-    public usuario: string
-
-    public senha: string
-
+  @IsNotEmpty({ message: 'O campo senha é obrigatório' })
+  public senha: string;
 }
